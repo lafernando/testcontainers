@@ -1,2 +1,1 @@
-Ballerina package for Testcontainers (https://www.testcontainers.org/)
-
+* Ballerina package for Testcontainers (https://www.testcontainers.org/)
