@@ -1,0 +1,2 @@
+bal bindgen -mvn org.testcontainers:postgresql:1.15.3 --public org.testcontainers.containers.PostgreSQLContainer
+

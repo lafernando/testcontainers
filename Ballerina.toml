@@ -29,7 +29,7 @@ version = "1.15.3"
 
 # transitive dependency of org.testcontainers:jdbc:1.15.3
 [[platform.java11.dependency]]
-groupId = "org.testcontainers"
+groupId = "org.testcontainers"r
 artifactId = "testcontainers"
 version = "1.15.3"
 
