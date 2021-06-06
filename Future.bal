@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen java.util.concurrent.Future
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `java.util.concurrent.Future` interface.

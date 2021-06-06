@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen org.testcontainers.lifecycle.Startable
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `org.testcontainers.lifecycle.Startable` interface.

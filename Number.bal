@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen java.lang.Number
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `java.lang.Number` class.

@@ -24,13 +24,11 @@ public distinct class PostgreSQLContainer {
     public function toString() returns string {
         return java:toString(self.jObj) ?: "null";
     }
-
     # The function that maps to the `addEnv` method of `org.testcontainers.containers.PostgreSQLContainer`.
     #
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + arg1 - The `string` value required to map with the Java method parameter.
     public function addEnv(string arg0, string arg1) {
-
         org_testcontainers_containers_PostgreSQLContainer_addEnv(self.jObj, java:fromString(arg0), java:fromString(arg1));
     }
 
@@ -46,7 +44,6 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `int[]` value required to map with the Java method parameter.
     # + return - The `error?` value returning from the Java mapping.
     public function addExposedPorts(int[] arg0) returns error? {
-
         org_testcontainers_containers_PostgreSQLContainer_addExposedPorts(self.jObj, check jarrays:toHandle(arg0, "int"));
     }
 
@@ -56,8 +53,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + arg2 - The `BindMode` value required to map with the Java method parameter.
     public function addFileSystemBind(string arg0, string arg1, BindMode arg2) {
-        org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind(self.jObj, java:fromString(arg0), 
-        java:fromString(arg1), arg2.jObj);
+        org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj);
     }
 
     # The function that maps to the `addFileSystemBind` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -67,8 +63,7 @@ public distinct class PostgreSQLContainer {
     # + arg2 - The `BindMode` value required to map with the Java method parameter.
     # + arg3 - The `SelinuxContext` value required to map with the Java method parameter.
     public function addFileSystemBind2(string arg0, string arg1, BindMode arg2, SelinuxContext arg3) {
-        org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind2(self.jObj, java:fromString(arg0), 
-        java:fromString(arg1), arg2.jObj, arg3.jObj);
+        org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind2(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj, arg3.jObj);
     }
 
     # The function that maps to the `addLink` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -84,8 +79,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + arg1 - The `string` value required to map with the Java method parameter.
     public function addParameter(string arg0, string arg1) {
-        org_testcontainers_containers_PostgreSQLContainer_addParameter(self.jObj, java:fromString(arg0), java:fromString(
-        arg1));
+        org_testcontainers_containers_PostgreSQLContainer_addParameter(self.jObj, java:fromString(arg0), java:fromString(arg1));
     }
 
     # The function that maps to the `apply` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -109,8 +103,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + arg1 - The `string` value required to map with the Java method parameter.
     public function copyFileFromContainer(string arg0, string arg1) {
-        org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer(self.jObj, java:fromString(arg0), 
-        java:fromString(arg1));
+        org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer(self.jObj, java:fromString(arg0), java:fromString(arg1));
     }
 
     # The function that maps to the `copyFileFromContainer` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -119,8 +112,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `ThrowingFunction` value required to map with the Java method parameter.
     # + return - The `Object` value returning from the Java mapping.
     public function copyFileFromContainer2(string arg0, ThrowingFunction arg1) returns Object {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer2(self.jObj, 
-        java:fromString(arg0), arg1.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer2(self.jObj, java:fromString(arg0), arg1.jObj);
         Object newObj = new (externalObj);
         return newObj;
     }
@@ -130,8 +122,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `MountableFile` value required to map with the Java method parameter.
     # + arg1 - The `string` value required to map with the Java method parameter.
     public function copyFileToContainer(MountableFile arg0, string arg1) {
-        org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer(self.jObj, arg0.jObj, 
-        java:fromString(arg1));
+        org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer(self.jObj, arg0.jObj, java:fromString(arg1));
     }
 
     # The function that maps to the `copyFileToContainer` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -139,8 +130,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Transferable` value required to map with the Java method parameter.
     # + arg1 - The `string` value required to map with the Java method parameter.
     public function copyFileToContainer2(Transferable arg0, string arg1) {
-        org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer2(self.jObj, arg0.jObj, java:fromString(
-        arg1));
+        org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer2(self.jObj, arg0.jObj, java:fromString(arg1));
     }
 
     # The function that maps to the `createConnection` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -148,8 +138,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `Connection` or the `SQLException` value returning from the Java mapping.
     public function createConnection(string arg0) returns Connection|SQLException {
-        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_createConnection(self.jObj, 
-        java:fromString(arg0));
+        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_createConnection(self.jObj, java:fromString(arg0));
         if (externalObj is error) {
             SQLException e = error SQLException(SQLEXCEPTION, externalObj, message = externalObj.message());
             return e;
@@ -184,8 +173,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Startable[]` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function dependsOn3(Startable[] arg0) returns GenericContainer|error {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_dependsOn3(self.jObj, check 
-        jarrays:toHandle(arg0, "org.testcontainers.lifecycle.Startable"));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_dependsOn3(self.jObj, check jarrays:toHandle(arg0, "org.testcontainers.lifecycle.Startable"));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -204,8 +192,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string[]` value required to map with the Java method parameter.
     # + return - The `ExecResult` or the `IOException` value returning from the Java mapping.
     public function execInContainer(Charset arg0, string[] arg1) returns ExecResult|IOException|error {
-        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_execInContainer(self.jObj, arg0.
-        jObj, check jarrays:toHandle(arg1, "java.lang.String"));
+        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_execInContainer(self.jObj, arg0.jObj, check jarrays:toHandle(arg1, "java.lang.String"));
         if (externalObj is error) {
             IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
             return e;
@@ -220,8 +207,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string[]` value required to map with the Java method parameter.
     # + return - The `ExecResult` or the `IOException` value returning from the Java mapping.
     public function execInContainer2(string[] arg0) returns ExecResult|IOException|error {
-        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_execInContainer2(self.jObj, check 
-        jarrays:toHandle(arg0, "java.lang.String"));
+        handle|error externalObj = org_testcontainers_containers_PostgreSQLContainer_execInContainer2(self.jObj, check jarrays:toHandle(arg0, "java.lang.String"));
         if (externalObj is error) {
             IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
             return e;
@@ -244,8 +230,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `OutputType[]` value required to map with the Java method parameter.
     # + return - The `error?` value returning from the Java mapping.
     public function followOutput2(Consumer arg0, OutputType[] arg1) returns error? {
-        org_testcontainers_containers_PostgreSQLContainer_followOutput2(self.jObj, arg0.jObj, check jarrays:toHandle(
-        arg1, "org.testcontainers.containers.output.OutputFrame$OutputType"));
+        org_testcontainers_containers_PostgreSQLContainer_followOutput2(self.jObj, arg0.jObj, check jarrays:toHandle(arg1, "org.testcontainers.containers.output.OutputFrame$OutputType"));
     }
 
     # The function that maps to the `getBinds` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -511,8 +496,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `OutputType[]` value required to map with the Java method parameter.
     # + return - The `string` value returning from the Java mapping.
     public function getLogs2(OutputType[] arg0) returns string?|error {
-        return java:toString(org_testcontainers_containers_PostgreSQLContainer_getLogs2(self.jObj, check 
-        jarrays:toHandle(arg0, "org.testcontainers.containers.output.OutputFrame$OutputType")));
+        return java:toString(org_testcontainers_containers_PostgreSQLContainer_getLogs2(self.jObj, check jarrays:toHandle(arg0, "org.testcontainers.containers.output.OutputFrame$OutputType")));
     }
 
     # The function that maps to the `getMappedPort` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -717,8 +701,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string[]` value required to map with the Java method parameter.
     # + return - The `error?` value returning from the Java mapping.
     public function setCommand2(string[] arg0) returns error? {
-        org_testcontainers_containers_PostgreSQLContainer_setCommand2(self.jObj, check jarrays:toHandle(arg0, 
-        "java.lang.String"));
+        org_testcontainers_containers_PostgreSQLContainer_setCommand2(self.jObj, check jarrays:toHandle(arg0, "java.lang.String"));
     }
 
     # The function that maps to the `setCommandParts` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -726,8 +709,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string[]` value required to map with the Java method parameter.
     # + return - The `error?` value returning from the Java mapping.
     public function setCommandParts(string[] arg0) returns error? {
-        org_testcontainers_containers_PostgreSQLContainer_setCommandParts(self.jObj, check jarrays:toHandle(arg0, 
-        "java.lang.String"));
+        org_testcontainers_containers_PostgreSQLContainer_setCommandParts(self.jObj, check jarrays:toHandle(arg0, "java.lang.String"));
     }
 
     # The function that maps to the `setCopyToFileContainerPathMap` method of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -900,8 +882,7 @@ public distinct class PostgreSQLContainer {
     public function 'wait() returns InterruptedException? {
         error|() externalObj = org_testcontainers_containers_PostgreSQLContainer_wait(self.jObj);
         if (externalObj is error) {
-            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.
-            message());
+            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
             return e;
         }
     }
@@ -913,8 +894,7 @@ public distinct class PostgreSQLContainer {
     public function wait2(int arg0) returns InterruptedException? {
         error|() externalObj = org_testcontainers_containers_PostgreSQLContainer_wait2(self.jObj, arg0);
         if (externalObj is error) {
-            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.
-            message());
+            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
             return e;
         }
     }
@@ -927,8 +907,7 @@ public distinct class PostgreSQLContainer {
     public function wait3(int arg0, int arg1) returns InterruptedException? {
         error|() externalObj = org_testcontainers_containers_PostgreSQLContainer_wait3(self.jObj, arg0, arg1);
         if (externalObj is error) {
-            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.
-            message());
+            InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
             return e;
         }
     }
@@ -950,8 +929,7 @@ public distinct class PostgreSQLContainer {
     # + arg2 - The `BindMode` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withClasspathResourceMapping(string arg0, string arg1, BindMode arg2) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping(self.jObj, 
-        java:fromString(arg0), java:fromString(arg1), arg2.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -963,10 +941,8 @@ public distinct class PostgreSQLContainer {
     # + arg2 - The `BindMode` value required to map with the Java method parameter.
     # + arg3 - The `SelinuxContext` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
-    public function withClasspathResourceMapping2(string arg0, string arg1, BindMode arg2, SelinuxContext arg3) returns 
-    GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping2(self.jObj, 
-        java:fromString(arg0), java:fromString(arg1), arg2.jObj, arg3.jObj);
+    public function withClasspathResourceMapping2(string arg0, string arg1, BindMode arg2, SelinuxContext arg3) returns GenericContainer {
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping2(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj, arg3.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -976,8 +952,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withCommand(string arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCommand(self.jObj, java:fromString(
-        arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCommand(self.jObj, java:fromString(arg0));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -987,8 +962,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string[]` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withCommand2(string[] arg0) returns GenericContainer|error {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCommand2(self.jObj, check 
-        jarrays:toHandle(arg0, "java.lang.String"));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCommand2(self.jObj, check jarrays:toHandle(arg0, "java.lang.String"));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -998,8 +972,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `int` value required to map with the Java method parameter.
     # + return - The `JdbcDatabaseContainer` value returning from the Java mapping.
     public function withConnectTimeoutSeconds(int arg0) returns JdbcDatabaseContainer {
-        handle externalObj = 
-        org_testcontainers_containers_PostgreSQLContainer_withConnectTimeoutSeconds(self.jObj, arg0);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withConnectTimeoutSeconds(self.jObj, arg0);
         JdbcDatabaseContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1010,8 +983,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withCopyFileToContainer(MountableFile arg0, string arg1) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCopyFileToContainer(self.jObj, arg0.
-        jObj, java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCopyFileToContainer(self.jObj, arg0.jObj, java:fromString(arg1));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1021,8 +993,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Consumer` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withCreateContainerCmdModifier(Consumer arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCreateContainerCmdModifier(self.jObj, 
-        arg0.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withCreateContainerCmdModifier(self.jObj, arg0.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1032,8 +1003,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `PostgreSQLContainer` value returning from the Java mapping.
     public function withDatabaseName(string arg0) returns PostgreSQLContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withDatabaseName(self.jObj, 
-        java:fromString(arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withDatabaseName(self.jObj, java:fromString(arg0));
         PostgreSQLContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1054,8 +1024,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `Function` value required to map with the Java method parameter.
     # + return - The `Container` value returning from the Java mapping.
     public function withEnv2(string arg0, Function arg1) returns Container {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withEnv2(self.jObj, java:fromString(arg0), 
-        arg1.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withEnv2(self.jObj, java:fromString(arg0), arg1.jObj);
         Container newObj = new (externalObj);
         return newObj;
     }
@@ -1066,8 +1035,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withEnv3(string arg0, string arg1) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withEnv3(self.jObj, java:fromString(arg0), 
-        java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withEnv3(self.jObj, java:fromString(arg0), java:fromString(arg1));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1077,8 +1045,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Integer[]` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withExposedPorts(Integer[] arg0) returns GenericContainer|error {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withExposedPorts(self.jObj, check 
-        jarrays:toHandle(arg0, "java.lang.Integer"));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withExposedPorts(self.jObj, check jarrays:toHandle(arg0, "java.lang.Integer"));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1089,8 +1056,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withExtraHost(string arg0, string arg1) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withExtraHost(self.jObj, java:fromString(
-        arg0), java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withExtraHost(self.jObj, java:fromString(arg0), java:fromString(arg1));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1101,8 +1067,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `Container` value returning from the Java mapping.
     public function withFileSystemBind(string arg0, string arg1) returns Container {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind(self.jObj, 
-        java:fromString(arg0), java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind(self.jObj, java:fromString(arg0), java:fromString(arg1));
         Container newObj = new (externalObj);
         return newObj;
     }
@@ -1114,8 +1079,7 @@ public distinct class PostgreSQLContainer {
     # + arg2 - The `BindMode` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withFileSystemBind2(string arg0, string arg1, BindMode arg2) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind2(self.jObj, 
-        java:fromString(arg0), java:fromString(arg1), arg2.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind2(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1135,8 +1099,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `JdbcDatabaseContainer` value returning from the Java mapping.
     public function withInitScript(string arg0) returns JdbcDatabaseContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withInitScript(self.jObj, java:fromString(
-        arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withInitScript(self.jObj, java:fromString(arg0));
         JdbcDatabaseContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1147,8 +1110,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withLabel(string arg0, string arg1) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withLabel(self.jObj, 
-        java:fromString(arg0), java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withLabel(self.jObj, java:fromString(arg0), java:fromString(arg1));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1178,8 +1140,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Duration` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withMinimumRunningDuration(Duration arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withMinimumRunningDuration(self.jObj, 
-        arg0.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withMinimumRunningDuration(self.jObj, arg0.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1199,8 +1160,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string[]` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withNetworkAliases(string[] arg0) returns GenericContainer|error {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withNetworkAliases(self.jObj, check 
-        jarrays:toHandle(arg0, "java.lang.String"));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withNetworkAliases(self.jObj, check jarrays:toHandle(arg0, "java.lang.String"));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1210,8 +1170,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withNetworkMode(string arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withNetworkMode(self.jObj, 
-        java:fromString(arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withNetworkMode(self.jObj, java:fromString(arg0));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1221,8 +1180,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `PostgreSQLContainer` value returning from the Java mapping.
     public function withPassword(string arg0) returns PostgreSQLContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withPassword(self.jObj, java:fromString(
-        arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withPassword(self.jObj, java:fromString(arg0));
         PostgreSQLContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1252,8 +1210,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `Long` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withSharedMemorySize(Long arg0) returns GenericContainer {
-        handle externalObj = 
-        org_testcontainers_containers_PostgreSQLContainer_withSharedMemorySize(self.jObj, arg0.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withSharedMemorySize(self.jObj, arg0.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1273,8 +1230,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `StartupCheckStrategy` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withStartupCheckStrategy(StartupCheckStrategy arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withStartupCheckStrategy(self.jObj, arg0.
-        jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withStartupCheckStrategy(self.jObj, arg0.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1294,8 +1250,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `int` value required to map with the Java method parameter.
     # + return - The `JdbcDatabaseContainer` value returning from the Java mapping.
     public function withStartupTimeoutSeconds(int arg0) returns JdbcDatabaseContainer {
-        handle externalObj = 
-        org_testcontainers_containers_PostgreSQLContainer_withStartupTimeoutSeconds(self.jObj, arg0);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withStartupTimeoutSeconds(self.jObj, arg0);
         JdbcDatabaseContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1316,8 +1271,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `string` value required to map with the Java method parameter.
     # + return - The `JdbcDatabaseContainer` value returning from the Java mapping.
     public function withUrlParam(string arg0, string arg1) returns JdbcDatabaseContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withUrlParam(self.jObj, java:fromString(
-        arg0), java:fromString(arg1));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withUrlParam(self.jObj, java:fromString(arg0), java:fromString(arg1));
         JdbcDatabaseContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1327,8 +1281,7 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `PostgreSQLContainer` value returning from the Java mapping.
     public function withUsername(string arg0) returns PostgreSQLContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withUsername(self.jObj, java:fromString(
-        arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withUsername(self.jObj, java:fromString(arg0));
         PostgreSQLContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1339,8 +1292,7 @@ public distinct class PostgreSQLContainer {
     # + arg1 - The `BindMode` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withVolumesFrom(Container arg0, BindMode arg1) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withVolumesFrom(self.jObj, arg0.jObj, 
-        arg1.jObj);
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withVolumesFrom(self.jObj, arg0.jObj, arg1.jObj);
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
@@ -1350,11 +1302,11 @@ public distinct class PostgreSQLContainer {
     # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `GenericContainer` value returning from the Java mapping.
     public function withWorkingDirectory(string arg0) returns GenericContainer {
-        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withWorkingDirectory(self.jObj, 
-        java:fromString(arg0));
+        handle externalObj = org_testcontainers_containers_PostgreSQLContainer_withWorkingDirectory(self.jObj, java:fromString(arg0));
         GenericContainer newObj = new (externalObj);
         return newObj;
     }
+
 }
 
 # The constructor function to generate an object of `org.testcontainers.containers.PostgreSQLContainer`.
@@ -1381,8 +1333,7 @@ public function newPostgreSQLContainer2(DockerImageName arg0) returns PostgreSQL
 # + arg0 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PostgreSQLContainer` class generated.
 public function newPostgreSQLContainer3(string arg0) returns PostgreSQLContainer {
-    handle externalObj = 
-    org_testcontainers_containers_PostgreSQLContainer_newPostgreSQLContainer3(java:fromString(arg0));
+    handle externalObj = org_testcontainers_containers_PostgreSQLContainer_newPostgreSQLContainer3(java:fromString(arg0));
     PostgreSQLContainer newObj = new (externalObj);
     return newObj;
 }
@@ -1456,19 +1407,16 @@ function org_testcontainers_containers_PostgreSQLContainer_addExposedPorts(handl
     paramTypes: ["[I"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind(handle receiver, handle arg0, handle arg1, 
-                                                                             handle arg2) = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind(handle receiver, handle arg0, handle arg1, handle arg2) = @java:Method {
     name: "addFileSystemBind",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind2(handle receiver, handle arg0, handle arg1, 
-                                                                              handle arg2, handle arg3) = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_addFileSystemBind2(handle receiver, handle arg0, handle arg1, handle arg2, handle arg3) = @java:Method {
     name: "addFileSystemBind",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
-    paramTypes: 
-    ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode", "org.testcontainers.containers.SelinuxContext"]
+    paramTypes: ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode", "org.testcontainers.containers.SelinuxContext"]
 } external;
 
 function org_testcontainers_containers_PostgreSQLContainer_addLink(handle receiver, handle arg0, handle arg1) = @java:Method {
@@ -1483,8 +1431,7 @@ function org_testcontainers_containers_PostgreSQLContainer_addParameter(handle r
     paramTypes: ["java.lang.String", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_apply(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_apply(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "apply",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.junit.runners.model.Statement", "org.junit.runner.Description"]
@@ -1496,15 +1443,13 @@ function org_testcontainers_containers_PostgreSQLContainer_close(handle receiver
     paramTypes: []
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer(handle receiver, handle arg0, 
-                                                                                 handle arg1) = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer(handle receiver, handle arg0, handle arg1) = @java:Method {
     name: "copyFileFromContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer2(handle receiver, handle arg0, 
-                                                                                  handle arg1) returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_copyFileFromContainer2(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "copyFileFromContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "org.testcontainers.utility.ThrowingFunction"]
@@ -1516,15 +1461,13 @@ function org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer(h
     paramTypes: ["org.testcontainers.utility.MountableFile", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer2(handle receiver, handle arg0, 
-                                                                                handle arg1) = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_copyFileToContainer2(handle receiver, handle arg0, handle arg1) = @java:Method {
     name: "copyFileToContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.testcontainers.images.builder.Transferable", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_createConnection(handle receiver, handle arg0) 
-returns handle|error = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_createConnection(handle receiver, handle arg0) returns handle|error = @java:Method {
     name: "createConnection",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String"]
@@ -1554,15 +1497,13 @@ function org_testcontainers_containers_PostgreSQLContainer_equals(handle receive
     paramTypes: ["java.lang.Object"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_execInContainer(handle receiver, handle arg0, handle arg1) 
-returns handle|error = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_execInContainer(handle receiver, handle arg0, handle arg1) returns handle|error = @java:Method {
     name: "execInContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.nio.charset.Charset", "[Ljava.lang.String;"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_execInContainer2(handle receiver, handle arg0) 
-returns handle|error = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_execInContainer2(handle receiver, handle arg0) returns handle|error = @java:Method {
     name: "execInContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["[Ljava.lang.String;"]
@@ -1628,15 +1569,13 @@ function org_testcontainers_containers_PostgreSQLContainer_getContainerName(hand
     paramTypes: []
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_getCopyToFileContainerPathMap(handle receiver) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_getCopyToFileContainerPathMap(handle receiver) returns handle = @java:Method {
     name: "getCopyToFileContainerPathMap",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: []
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_getCreateContainerCmdModifiers(handle receiver) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_getCreateContainerCmdModifiers(handle receiver) returns handle = @java:Method {
     name: "getCreateContainerCmdModifiers",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: []
@@ -2110,21 +2049,16 @@ function org_testcontainers_containers_PostgreSQLContainer_waitingFor(handle rec
     paramTypes: ["org.testcontainers.containers.wait.strategy.WaitStrategy"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping(handle receiver, handle arg0, 
-                                                                                        handle arg1, handle arg2) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping(handle receiver, handle arg0, handle arg1, handle arg2) returns handle = @java:Method {
     name: "withClasspathResourceMapping",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping2(handle receiver, handle arg0, 
-                                                                                         handle arg1, handle arg2, 
-                                                                                         handle arg3) returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withClasspathResourceMapping2(handle receiver, handle arg0, handle arg1, handle arg2, handle arg3) returns handle = @java:Method {
     name: "withClasspathResourceMapping",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
-    paramTypes: 
-    ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode", "org.testcontainers.containers.SelinuxContext"]
+    paramTypes: ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode", "org.testcontainers.containers.SelinuxContext"]
 } external;
 
 function org_testcontainers_containers_PostgreSQLContainer_withCommand(handle receiver, handle arg0) returns handle = @java:Method {
@@ -2139,29 +2073,25 @@ function org_testcontainers_containers_PostgreSQLContainer_withCommand2(handle r
     paramTypes: ["[Ljava.lang.String;"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withConnectTimeoutSeconds(handle receiver, int arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withConnectTimeoutSeconds(handle receiver, int arg0) returns handle = @java:Method {
     name: "withConnectTimeoutSeconds",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["int"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withCopyFileToContainer(handle receiver, handle arg0, 
-                                                                                   handle arg1) returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withCopyFileToContainer(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withCopyFileToContainer",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.testcontainers.utility.MountableFile", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withCreateContainerCmdModifier(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withCreateContainerCmdModifier(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withCreateContainerCmdModifier",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.util.function.Consumer"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withDatabaseName(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withDatabaseName(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withDatabaseName",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String"]
@@ -2173,50 +2103,43 @@ function org_testcontainers_containers_PostgreSQLContainer_withEnv(handle receiv
     paramTypes: ["java.util.Map"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withEnv2(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withEnv2(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withEnv",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.util.function.Function"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withEnv3(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withEnv3(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withEnv",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withExposedPorts(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withExposedPorts(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withExposedPorts",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["[Ljava.lang.Integer;"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withExtraHost(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withExtraHost(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withExtraHost",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withFileSystemBind",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind2(handle receiver, handle arg0, handle arg1, 
-                                                                               handle arg2) returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withFileSystemBind2(handle receiver, handle arg0, handle arg1, handle arg2) returns handle = @java:Method {
     name: "withFileSystemBind",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String", "org.testcontainers.containers.BindMode"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withImagePullPolicy(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withImagePullPolicy(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withImagePullPolicy",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.testcontainers.images.ImagePullPolicy"]
@@ -2228,8 +2151,7 @@ function org_testcontainers_containers_PostgreSQLContainer_withInitScript(handle
     paramTypes: ["java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withLabel(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withLabel(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withLabel",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
@@ -2247,8 +2169,7 @@ function org_testcontainers_containers_PostgreSQLContainer_withLogConsumer(handl
     paramTypes: ["java.util.function.Consumer"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withMinimumRunningDuration(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withMinimumRunningDuration(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withMinimumRunningDuration",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.time.Duration"]
@@ -2260,8 +2181,7 @@ function org_testcontainers_containers_PostgreSQLContainer_withNetwork(handle re
     paramTypes: ["org.testcontainers.containers.Network"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withNetworkAliases(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withNetworkAliases(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withNetworkAliases",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["[Ljava.lang.String;"]
@@ -2279,8 +2199,7 @@ function org_testcontainers_containers_PostgreSQLContainer_withPassword(handle r
     paramTypes: ["java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withPrivilegedMode(handle receiver, boolean arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withPrivilegedMode(handle receiver, boolean arg0) returns handle = @java:Method {
     name: "withPrivilegedMode",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["boolean"]
@@ -2292,36 +2211,31 @@ function org_testcontainers_containers_PostgreSQLContainer_withReuse(handle rece
     paramTypes: ["boolean"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withSharedMemorySize(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withSharedMemorySize(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withSharedMemorySize",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.Long"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withStartupAttempts(handle receiver, int arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withStartupAttempts(handle receiver, int arg0) returns handle = @java:Method {
     name: "withStartupAttempts",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["int"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withStartupCheckStrategy(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withStartupCheckStrategy(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withStartupCheckStrategy",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.testcontainers.containers.startupcheck.StartupCheckStrategy"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withStartupTimeout(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withStartupTimeout(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withStartupTimeout",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.time.Duration"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withStartupTimeoutSeconds(handle receiver, int arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withStartupTimeoutSeconds(handle receiver, int arg0) returns handle = @java:Method {
     name: "withStartupTimeoutSeconds",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["int"]
@@ -2333,8 +2247,7 @@ function org_testcontainers_containers_PostgreSQLContainer_withTmpFs(handle rece
     paramTypes: ["java.util.Map"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withUrlParam(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withUrlParam(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withUrlParam",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String", "java.lang.String"]
@@ -2346,15 +2259,13 @@ function org_testcontainers_containers_PostgreSQLContainer_withUsername(handle r
     paramTypes: ["java.lang.String"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withVolumesFrom(handle receiver, handle arg0, handle arg1) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withVolumesFrom(handle receiver, handle arg0, handle arg1) returns handle = @java:Method {
     name: "withVolumesFrom",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["org.testcontainers.containers.Container", "org.testcontainers.containers.BindMode"]
 } external;
 
-function org_testcontainers_containers_PostgreSQLContainer_withWorkingDirectory(handle receiver, handle arg0) 
-returns handle = @java:Method {
+function org_testcontainers_containers_PostgreSQLContainer_withWorkingDirectory(handle receiver, handle arg0) returns handle = @java:Method {
     name: "withWorkingDirectory",
     'class: "org.testcontainers.containers.PostgreSQLContainer",
     paramTypes: ["java.lang.String"]

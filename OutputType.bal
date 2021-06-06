@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen org.testcontainers.containers.output.OutputFrame$OutputType
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `org.testcontainers.containers.output.OutputFrame$OutputType` class.

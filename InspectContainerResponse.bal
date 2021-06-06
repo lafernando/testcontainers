@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen com.github.dockerjava.api.command.InspectContainerResponse
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `com.github.dockerjava.api.command.InspectContainerResponse` class.

@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen org.testcontainers.utility.ThrowingFunction
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `org.testcontainers.utility.ThrowingFunction` interface.

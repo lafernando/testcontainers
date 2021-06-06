@@ -1,7 +1,7 @@
 [package]
 org = "laf"
 name = "testcontainers"
-version = "1.15.3001"
+version = "1.15.3005"
 license = ["Apache-2.0"]
 authors = ["laf"]
 repository = "https://github.com/lafernando/testcontainers"

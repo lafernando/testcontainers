@@ -5,6 +5,7 @@
 // $ ballerina bindgen [(-cp|--classpath) <classpath>...] [(-o|--output) <output>] (<class-name>...)
 //
 // E.g. $ ballerina bindgen java.nio.charset.Charset
+
 import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `java.nio.charset.Charset` class.
